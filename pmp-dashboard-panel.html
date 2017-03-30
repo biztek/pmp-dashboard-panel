@@ -1,0 +1,87 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<!--
+`pmp-dashboard-panel`
+A panel used in dashboard
+
+@demo demo/index.html
+-->
+
+<dom-module id="pmp-dashboard-panel">
+  <template>
+    <style>
+      :host {
+        display: block;
+        --icon-color: var(--dark-theme-text-color);
+        --panel-title-background-color: var(--primary-color);
+        --panel-title-color: var(--dark-theme-text-color);
+        --panel-content-background-color: var(--primary-background-color);
+        --panel-content-color: var(--secondary-text-color);
+      }
+      .paneltitle {
+        padding: 8px;
+        text-align: center;
+        background-color: var(--panel-title-background-color);
+        color: var(--panel-title-color);
+        font-size: 17px;
+        height: 24px;
+      }
+
+      .flexchild {
+        @apply(--layout-flex);
+        margin: 16px;
+      }
+
+      iron-icon {
+        width: 24px;
+        height: 24px;
+        float: left;
+        color: var(--icon-color);
+      }
+
+      paper-material {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--layout-center-justified);
+        background-color: var(--panel-content-background-color);
+        color: var(--panel-content-color);
+        min-height: 200px;
+        padding: 8px;
+      }
+    </style>
+    <div class="flexchild">
+      <div class="paneltitle"><iron-icon icon="[[icon]]"></iron-icon>[[panelTitle]]</div>
+        <paper-material elevation="[[elevation]]">
+          <content></content>
+        </paper-material>
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'pmp-dashboard-panel',
+
+      properties: {
+        elevation: {
+          type: String,
+          value: '1'
+        },
+        icon: {
+          type: String,
+          value: 'icons:account-circle'
+        },
+        panelTitle: {
+          type: String,
+          value: 'Title'
+        },
+      },
+
+    });
+  </script>
+</dom-module>

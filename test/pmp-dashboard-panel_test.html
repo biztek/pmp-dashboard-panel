@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>pmp-dashboard-panel test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../pmp-dashboard-panel.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <pmp-dashboard-panel></pmp-dashboard-panel>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('pmp-dashboard-panel', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'pmp-dashboard-panel');
+        });
+      });
+    </script>
+  </body>
+</html>
