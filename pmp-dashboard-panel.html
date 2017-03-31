@@ -10,6 +10,22 @@
 A panel used in dashboard
 
 @demo demo/index.html
+
+To change color of the panel icon
+--icon-color: #fff;
+
+To change panel title background color
+--panel-title-background-color: green;
+
+To change panel title text color
+--panel-title-color: #fff;
+
+To change panel content background color
+--panel-content-background-color: gray;
+
+To change panel content text color
+--panel-content-color: #fff;
+
 -->
 
 <dom-module id="pmp-dashboard-panel">
@@ -50,7 +66,6 @@ A panel used in dashboard
         @apply(--layout-center-justified);
         background-color: var(--panel-content-background-color);
         color: var(--panel-content-color);
-        min-height: 200px;
         padding: 8px;
       }
     </style>

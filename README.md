@@ -5,37 +5,46 @@ A panel used in dashboard
 [![Build Status](https://travis-ci.org/biztek/pmp-dashboard-panel.svg?branch=master)](https://travis-ci.org/biztek/pmp-dashboard-panel)
 
 
-## Install the Polymer-CLI
+## Element Properties
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
-
-## Viewing Your Application
-
+To Set panel icon
 ```
-$ polymer serve
+<pmp-dashboard-panel icon="icons:flag">Content</pmp-dashboard-panel>
 ```
 
-## Building Your Application
-
+To Set panel elevation
 ```
-$ polymer build
-```
-
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
-
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
-
-```
-$ polymer serve build/bundled
+<pmp-dashboard-panel elevation="0">Content</pmp-dashboard-panel>
 ```
 
-## Running Tests
-
+To Set panel Title
 ```
-$ polymer test
+<pmp-dashboard-panel panel-Title="Test">Content</pmp-dashboard-panel>
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+## Panel Styling
+
+To change color of the panel icon
+```
+--icon-color: #fff;
+```
+
+To change panel title background color
+```
+--panel-title-background-color: green;
+```
+
+To change panel title text color
+```
+--panel-title-color: #fff;
+```
+
+To change panel content background color
+```
+--panel-content-background-color: gray;
+```
+
+To change panel content text color
+```
+--panel-content-color: #fff;
+```
